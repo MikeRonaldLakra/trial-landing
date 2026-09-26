@@ -1,4 +1,13 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import App from "../App.tsx";
-createRoot(document.getElementById("root")).render(<React.StrictMode><App /></React.StrictMode>);
+import App from "../App";
+import "./styles.css";
+
+const root = document.getElementById("root");
+if (!root) throw new Error("NodeBeta: missing #root element");
+
+createRoot(root).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
